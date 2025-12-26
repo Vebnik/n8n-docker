@@ -77,12 +77,11 @@ services:
       - TZ=${GENERIC_TIMEZONE}
     volumes:
       - n8n_data:/home/node/.n8n
-      - ./local-files:/files
     depends_on:
       postgres:
         condition: service_healthy
 
 volumes:
-  n8n_data:
-  traefik_data:
   postgres_data:
+  traefik_data:
+  n8n_data:
